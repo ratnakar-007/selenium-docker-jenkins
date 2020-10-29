@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="book-flight-module">
+    <test verbose="2" preserve-order="true" name="book-flight">
+        <parameter name="noOfPassengers" value="2"/>
+        <parameter name="expectedPrice" value="$1169 USD"/>
+        <classes>
+            <class name="com.newtour.tests.BookFlightTest">
+                <methods>
+                    <include name="registrationPageTest"/>
+                    <include name="registrationConfirmationTest"/>
+                    <include name="flightDetailsTest"/>
+                    <include name="findFlightTest"/>
+                    <include name="flightConfirmationTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="book-flight">
+        <parameter name="noOfPassengers" value="3"/>
+        <parameter name="expectedPrice" value="$1753 USD"/>
+        <classes>
+            <class name="com.newtour.tests.BookFlightTest">
+                <methods>
+                    <include name="registrationPageTest"/>
+                    <include name="registrationConfirmationTest"/>
+                    <include name="flightDetailsTest"/>
+                    <include name="findFlightTest"/>
+                    <include name="flightConfirmationTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="book-flight">
+        <parameter name="noOfPassengers" value="4"/>
+        <parameter name="expectedPrice" value="$2338 USD"/>
+        <classes>
+            <class name="com.newtour.tests.BookFlightTest">
+                <methods>
+                    <include name="registrationPageTest"/>
+                    <include name="registrationConfirmationTest"/>
+                    <include name="flightDetailsTest"/>
+                    <include name="findFlightTest"/>
+                    <include name="flightConfirmationTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

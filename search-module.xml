@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="search-module">
+    <test verbose="2" preserve-order="true" name="duckduckgo-search">
+        <parameter name="searchKeyword" value="JAVA"/>
+        <classes>
+            <class name="com.searchmodule.tests.SearchTest"/>
+        </classes>
+    </test>
+</suite>
