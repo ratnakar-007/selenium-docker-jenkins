@@ -142,7 +142,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.SearchTest">
+  <component name="RunManager" selected="TestNG.BookFlightTest">
     <configuration name="BookFlightTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-docker" />
       <extension name="coverage">
@@ -153,6 +153,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.newtour.tests" />
       <option name="MAIN_CLASS_NAME" value="com.newtour.tests.BookFlightTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -207,6 +208,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.searchmodule.tests" />
       <option name="MAIN_CLASS_NAME" value="com.searchmodule.tests.SearchTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
