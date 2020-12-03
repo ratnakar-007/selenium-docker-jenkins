@@ -1,30 +1,23 @@
 package com.newtour.tests;
 
+import com.basetest.BaseTest;
 import com.newtour.pages.*;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class BookFlightTest {
+public class BookFlightTest extends BaseTest {
 
-    private WebDriver driver;
-    private String noOfPassngers;
+    private String noOfPassengers;
     private String expPrice;
 
     @BeforeTest
     @Parameters({"noOfPassengers", "expectedPrice"})
-    public void setUp(String nop, String price) {
-        this.noOfPassngers = nop;
+    public void setUpParameters(String nop, String price) {
+        this.noOfPassengers = nop;
         this.expPrice = price;
-
-        //set path
-        WebDriverManager.chromedriver().setup();
-        this.driver = new ChromeDriver();
     }
 
     @Test
@@ -45,7 +38,7 @@ public class BookFlightTest {
     @Test(dependsOnMethods = "registrationConfirmationTest")
     public void flightDetailsTest() {
         FlightDetailsPage fdp = new FlightDetailsPage(driver);
-        fdp.selectPassengers(noOfPassngers);
+        fdp.selectPassengers(noOfPassengers);
         fdp.goToFindFlightsPage();
     }
 
@@ -61,10 +54,5 @@ public class BookFlightTest {
         FlightConfirmationPage fcp = new FlightConfirmationPage(driver);
         String actPrice = fcp.getPrizeAtConfirmation();
         Assert.assertEquals(actPrice, expPrice);
-    }
-
-    @AfterTest
-    public void tearDown() {
-        driver.quit();
     }
 }
