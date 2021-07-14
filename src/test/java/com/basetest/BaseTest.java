@@ -1,8 +1,6 @@
 package com.basetest;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterTest;
@@ -16,10 +14,6 @@ public class BaseTest {
 
     @BeforeTest
     public void setUpDriver() throws MalformedURLException {
-
-        //BROWSER => CHROME/FIREFOX
-        //HUB_HOST=> localhost/hostname
-
         String host = "localhost";
         DesiredCapabilities dc = DesiredCapabilities.chrome();
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="book-flight-module">
+<suite name="book-flight-module" parallel="tests">
     <test verbose="2" preserve-order="true" name="book-flight-2-pass">
         <parameter name="noOfPassengers" value="2"/>
         <parameter name="expectedPrice" value="$1169 USD"/>

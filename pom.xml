@@ -29,7 +29,7 @@
                     <suiteXmlFiles>
                         <!-- TestNG suite XML files -->
                         <suiteXmlFile>book-flight-module.xml</suiteXmlFile>
-                        <suiteXmlFile>search-module.xml</suiteXmlFile>
+                        <!--suiteXmlFile>search-module.xml</suiteXmlFile-->
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
