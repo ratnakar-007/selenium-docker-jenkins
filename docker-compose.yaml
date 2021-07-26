@@ -17,3 +17,25 @@ services:
       - hub
     environment:
       - HUB_HOST=hub
+  search-module:
+    image: ratnakar007/selenium-docker
+    depends_on:
+      - chrome
+      - firefox
+    environment:
+      - BROWSER=chrome
+      - HUB_HOST=hub
+      - MODULE=search-module.xml
+    volumes:
+      - ./search-result:/usr/share/dockerLearning/test-output
+  book-flight-module:
+    image: ratnakar007/selenium-docker
+    depends_on:
+      - chrome
+      - firefox
+    environment:
+      - BROWSER=chrome
+      - HUB_HOST=hub
+      - MODULE=book-flight-module.xml
+    volumes:
+      - ./book-flight-result:/usr/share/dockerLearning/test-output
